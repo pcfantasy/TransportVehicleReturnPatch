@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1610F23-BF20-4249-88D3-965BCE513D26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TransportVehicleReturnPatch</RootNamespace>
+    <AssemblyName>TransportVehicleReturnPatch</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.0.0.9\lib\net35\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CitiesHarmony.API, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CitiesHarmony.API.1.0.4\lib\net35\CitiesHarmony.API.dll</HintPath>
+    </Reference>
+    <Reference Include="ColossalManaged">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
+    </Reference>
+    <Reference Include="ICities">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>F:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Patch\TrolleybusAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\TramAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\PassengerTrainAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\PassengerShipAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\PassengerPlaneAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\PassengerHelicopterAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\PassengerFerryAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\PassengerBlimpAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\CableCarAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\BusAILoadPassengersPatch.cs" />
+    <Compile Include="Patch\TransportManagerReleaseLineImplementationPatch.cs" />
+    <Compile Include="TransportVehicleReturnPatchThreading.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="Patch\TransportLineGetActiveVehiclePatch.cs" />
+    <Compile Include="TransportVehicleReturnPatch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\DebugLog.cs" />
+    <Compile Include="Util\HarmonyDetours.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rd /q /s "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch"
+mkdir "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch"
+copy "D:\Mod\TransportVehicleReturnPatch\bin\Release\TransportVehicleReturnPatch.dll" "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch\TransportVehicleReturnPatch.dll"
+copy "D:\Mod\TransportVehicleReturnPatch\bin\Release\CitiesHarmony.API.dll" "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch\CitiesHarmony.API.dll"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

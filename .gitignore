@@ -1,0 +1,13 @@
+*.dll
+*.cache
+*.pdb
+*.xml
+.vs/TransportVehicleReturnPatch/v14/.suo
+.vs/TransportVehicleReturnPatch/v16/.suo
+.vs/TransportVehicleReturnPatch/v16/Server/sqlite3/db.lock
+.vs/TransportVehicleReturnPatch/v16/Server/sqlite3/storage.ide
+obj/Release/TransportVehicleReturnPatch.csproj.CopyComplete
+.vs/TransportVehicleReturnPatch/v16/Server/sqlite3/storage.ide-shm
+.vs/TransportVehicleReturnPatch/v16/Server/sqlite3/storage.ide-wal
+
+packages/*

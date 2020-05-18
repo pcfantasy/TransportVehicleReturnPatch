@@ -1,0 +1,15 @@
+D:\Mod\TransportVehicleReturnPatch\bin\Release\TransportVehicleReturnPatch.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\TransportVehicleReturnPatch.pdb
+D:\Mod\TransportVehicleReturnPatch\bin\Release\0Harmony.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\Assembly-CSharp.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\CitiesHarmony.API.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\ColossalManaged.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\ICities.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\UnityEngine.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\PopsApiWrapper.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\Assembly-CSharp-firstpass.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\Mod\TransportVehicleReturnPatch\bin\Release\0Harmony.xml
+D:\Mod\TransportVehicleReturnPatch\obj\Release\TransportVehicleReturnPatch.csproj.CopyComplete
+D:\Mod\TransportVehicleReturnPatch\obj\Release\TransportVehicleReturnPatch.dll
+D:\Mod\TransportVehicleReturnPatch\obj\Release\TransportVehicleReturnPatch.pdb
