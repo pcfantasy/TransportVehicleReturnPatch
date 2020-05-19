@@ -84,9 +84,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rd /q /s "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch"
-mkdir "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch"
-copy "D:\Mod\TransportVehicleReturnPatch\bin\Release\TransportVehicleReturnPatch.dll" "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch\TransportVehicleReturnPatch.dll"
-copy "D:\Mod\TransportVehicleReturnPatch\bin\Release\CitiesHarmony.API.dll" "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch\CitiesHarmony.API.dll"</PostBuildEvent>
+    <PostBuildEvent>rd /q /s "F:\SteamLibrary\steamapps\workshop\content\255710\2101977903"
+mkdir "F:\SteamLibrary\steamapps\workshop\content\255710\2101977903"
+copy "D:\Mod\TransportVehicleReturnPatch\bin\Release\TransportVehicleReturnPatch.dll"  "F:\SteamLibrary\steamapps\workshop\content\255710\2101977903\TransportVehicleReturnPatch.dll"
+copy "D:\Mod\TransportVehicleReturnPatch\PreviewImage.png"  "F:\SteamLibrary\steamapps\workshop\content\255710\2101977903\PreviewImage.png"
+copy "D:\Mod\TransportVehicleReturnPatch\bin\Release\CitiesHarmony.API.dll"  "F:\SteamLibrary\steamapps\workshop\content\255710\2101977903\CitiesHarmony.API.dll"</PostBuildEvent>
   </PropertyGroup>
 </Project>
