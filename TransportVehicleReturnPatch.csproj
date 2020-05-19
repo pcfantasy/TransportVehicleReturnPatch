@@ -79,6 +79,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="PreviewImage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>rd /q /s "C:\Users\Administrator\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\TransportVehicleReturnPatch"
