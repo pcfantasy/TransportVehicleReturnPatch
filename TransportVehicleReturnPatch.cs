@@ -45,32 +45,5 @@ namespace TransportVehicleReturnPatch
         {
             debugMode = index;
         }
-
-        public static int GetInsidePassengerCount(ref Vehicle data)
-        {
-            CitizenManager instance = Singleton<CitizenManager>.instance;
-            uint num = data.m_citizenUnits;
-            int num2 = 0;
-            int passengerCount = 0;
-            while (num != 0u)
-            {
-                uint nextUnit = instance.m_units.m_buffer[(int)((UIntPtr)num)].m_nextUnit;
-                for (int i = 0; i < 5; i++)
-                {
-                    uint citizen = instance.m_units.m_buffer[(int)((UIntPtr)num)].GetCitizen(i);
-                    if (citizen != 0u)
-                    {
-                        passengerCount++;
-                    }
-                }
-                num = nextUnit;
-                if (++num2 > 524288)
-                {
-                    CODebugBase<LogChannel>.Error(LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
-                    break;
-                }
-            }
-            return passengerCount;
-        }
     }
 }

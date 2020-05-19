@@ -16,7 +16,7 @@ namespace TransportVehicleReturnPatch.Patch
 			if (__result != 0)
 			{
 				var data = Singleton<VehicleManager>.instance.m_vehicles.m_buffer[__result];
-				int passengerCount = TransportVehicleReturnPatch.GetInsidePassengerCount(ref data);
+				data.Info.m_vehicleAI.GetBufferStatus(__result, ref Singleton<VehicleManager>.instance.m_vehicles.m_buffer[__result], out string _, out int passengerCount, out int _);
 				if (data.m_transportLine != 0)
 				{
 					if (passengerCount != 0)

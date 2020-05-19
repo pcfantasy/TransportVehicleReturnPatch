@@ -18,7 +18,7 @@ namespace TransportVehicleReturnPatch.Patch
 			{
 				if (TransportVehicleReturnPatch.rejectPassengerVehicleID[data.m_transportLine] == vehicleID)
 				{
-					int passengerCount = TransportVehicleReturnPatch.GetInsidePassengerCount(ref data);
+					__instance.GetBufferStatus(vehicleID, ref Singleton<VehicleManager>.instance.m_vehicles.m_buffer[vehicleID], out string _, out int passengerCount, out int _);
 					if (passengerCount == 0)
 					{
 						TransportVehicleReturnPatch.rejectPassengerVehicleID[data.m_transportLine] = 0;
