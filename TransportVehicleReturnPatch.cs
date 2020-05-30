@@ -8,7 +8,7 @@ namespace TransportVehicleReturnPatch
 {
     public class TransportVehicleReturnPatch : IUserMod
     {
-        public static ushort[] rejectPassengerVehicleID = new ushort[255];
+        public static ushort[] rejectPassengerVehicleID = new ushort[256];
         public static bool IsEnabled = false;
         public static bool debugMode = false;
 
